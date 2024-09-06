@@ -1,0 +1,28 @@
+.card {
+    width: 100%;
+    margin-top: 2rem;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: black;
+    border-radius: 6px;
+}
+.card h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    padding: 1rem;
+}
+.active {
+    color: green;
+    &:hover {
+        color: white;
+        background-color: orangered;
+        cursor: pointer;
+    }
+}
+.cancel {
+    color: red;
+}

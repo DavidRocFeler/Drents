@@ -1,0 +1,41 @@
+/* src/components/Common/MainProperties/MainProperties.css */
+#cardsProperties {
+  display: grid; /* Cambia a Grid Layout */
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+  grid-template-rows: auto auto;
+  gap: 10px; /* Espacio entre las tarjetas */
+  transition: transform 0.5s ease-in-out;  
+}
+.properties {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 5em;
+  margin-bottom: 1em;
+}
+.nav-arrow {
+  position: absolute;
+  top: 46rem;
+  transform: translateY(-50%);
+  background: transparent;
+  color: black;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.left-arrow {
+  left: 45%;
+}
+
+.right-arrow {
+  right: 45%;
+}
+.Pag {
+  padding-top: 1.95em;
+  text-align: center;
+  width: 2em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: auto;
+}
