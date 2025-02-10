@@ -6,6 +6,8 @@ import JustLogo from "../assets/just-logo.jpg";
 import ImageForm from "../components/ImageForm";
 import { validateRegister } from "../helpers/validateRegister";
 
+const API_URL = import.meta.env.VITE_API_URL
+
 function SignUp() {
    // Hook para navegar
    const navigate = useNavigate();
@@ -48,7 +50,7 @@ function SignUp() {
       event.preventDefault();
       
       try {
-         await axios.post("http://localhost:3000/users/register", userData);
+         await axios.post(`${API_URL}/users/register`, userData);
          alert("Successful registration");
 
          // Redirigir al usuario a la página de login

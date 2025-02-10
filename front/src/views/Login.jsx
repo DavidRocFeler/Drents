@@ -8,6 +8,8 @@ import { useDispatch } from "react-redux";
 import { loginSuccess } from "../redux/userSlice.js";
 import axios from "axios";
 
+const API_URL = import.meta.env.VITE_API_URL
+
 // 1 crear el primer evento para los inputos inicien vacios
 function Login() {
   const [ userData,  setUserData ] = useState({
@@ -44,7 +46,7 @@ function Login() {
   function handleOnSubmit(event) {
     event.preventDefault();
     // enviar el post ala api de login
-    axios.post("http://localhost:3000/users/login", {
+    axios.post(`${API_URL}/users/login`, {
       username: userData.username,
       password: userData.password,
     })

@@ -6,6 +6,8 @@ import JustLogo from "../assets/just-logo.jpg";
 import ImageForm from "../components/ImageForm";
 import { validateAppointments } from "../helpers/validateAppointments";
 
+const API_URL = import.meta.env.VITE_API_URL
+
 const Schedule = () => {
     // Hook para redireccionar
     const navigate = useNavigate();
@@ -53,7 +55,7 @@ const Schedule = () => {
 
         try {
             // Enviar la solicitud con el userId desde el localStorage
-            await axios.post("http://localhost:3000/appointments/schedule", {
+            await axios.post(`${API_URL}/appointments/schedule`, {
                 ...scheduleData,
                 userId,
             });

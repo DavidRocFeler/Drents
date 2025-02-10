@@ -1,5 +1,6 @@
 import styles from "../styles/Card.module.css";
 import axios from "axios";
+const API_URL = import.meta.env.VITE_API_URL
 
 const Turnos = (props) => {
     const { id, date, time, status, description } = props.appointments;
@@ -8,7 +9,7 @@ const Turnos = (props) => {
         console.log(`Trying to cancel the turn with id${id}`);
         if (window.confirm(`Do you want to cancel the shift with id ${id}?`)) {
             console.log(`Confirmed: Cancel Shift with id ${id}`);
-            axios.put(`http://localhost:3000/appointments/cancel/${id}`)
+            axios.put(`${API_URL}/appointments/cancel/${id}`)
                 .then(response => {
                     console.log(`shift with id ${id} successfully canceled. Server Response:`, response.data);
                     alert(`The shift with id ${id} has been cancelled`);

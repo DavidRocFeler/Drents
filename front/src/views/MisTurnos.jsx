@@ -6,6 +6,8 @@ import axios from "axios";
 import NavBar from "../components/NavBar";
 import { loginSuccess } from "../redux/userSlice";
 
+const API_URL = import.meta.env.VITE_API_URL
+
 const MisTurnos = () => {
     const [appointments, setAppointments] = useState([]);
     const userId = useSelector((state) => state.user.userInfo?.id);
@@ -25,7 +27,7 @@ const MisTurnos = () => {
     useEffect(() => {
         if (userId) {
             console.log(`Ejecutando solicitud para obtener los datos del usuario con ID ${userId}`);
-            axios.get(`http://localhost:3000/users/${userId}`)  // Ahora hacemos la solicitud a /users/:id
+            axios.get(`${API_URL}/users/${userId}`)  // Ahora hacemos la solicitud a /users/:id
                 .then((res) => {
                     console.log("Datos obtenidos del usuario con citas:", res.data);
 
