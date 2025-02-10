@@ -6,7 +6,7 @@ import JustLogo from "../assets/just-logo.jpg";
 import ImageForm from "../components/ImageForm";
 import { validateAppointments } from "../helpers/validateAppointments";
 
-const API_URL = import.meta.env.VITE_API_URL
+const API_URL = import.meta.env.VITE_API_URL || "https://drents-production.up.railway.app";
 
 const Schedule = () => {
     // Hook para redireccionar

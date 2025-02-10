@@ -6,7 +6,7 @@ import JustLogo from "../assets/just-logo.jpg";
 import ImageForm from "../components/ImageForm";
 import { validateRegister } from "../helpers/validateRegister";
 
-const API_URL = import.meta.env.VITE_API_URL
+const API_URL = import.meta.env.VITE_API_URL || "https://drents-production.up.railway.app";
 
 function SignUp() {
    // Hook para navegar

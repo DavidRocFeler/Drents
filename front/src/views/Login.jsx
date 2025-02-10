@@ -8,7 +8,9 @@ import { useDispatch } from "react-redux";
 import { loginSuccess } from "../redux/userSlice.js";
 import axios from "axios";
 
-const API_URL = import.meta.env.VITE_API_URL
+const API_URL = import.meta.env.VITE_API_URL || "https://drents-production.up.railway.app";
+console.log("Trayendo la API desde:", API_URL); // Para depuración
+
 
 // 1 crear el primer evento para los inputos inicien vacios
 function Login() {
