@@ -1,6 +1,7 @@
 import styles from "../styles/Card.module.css";
 import axios from "axios";
-const API_URL = import.meta.env.VITE_API_URL
+
+const API_URL = import.meta.env.VITE_API_URL || "https://drents-production.up.railway.app";
 
 const Turnos = (props) => {
     const { id, date, time, status, description } = props.appointments;
