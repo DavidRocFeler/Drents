@@ -17,6 +17,9 @@ const AppDataSource = new DataSource({
     entities: [User, Appointment, Credential],
     migrations: [],
     subscribers: [],
+    ssl: {
+        rejectUnauthorized: false, // 🚀 Esto habilita SSL para la conexión con Aiven
+    },
 });
 
 export default AppDataSource;
