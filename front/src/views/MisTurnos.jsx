@@ -6,7 +6,7 @@ import axios from "axios";
 import NavBar from "../components/NavBar";
 import { loginSuccess } from "../redux/userSlice";
 
-const API_URL = import.meta.env.VITE_API_URL
+const API_URL = import.meta.env.VITE_API_URL || "https://drents-production.up.railway.app";
 
 const MisTurnos = () => {
     const [appointments, setAppointments] = useState([]);
